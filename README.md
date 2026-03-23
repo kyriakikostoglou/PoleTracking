@@ -243,7 +243,10 @@ The **pole magnitude does NOT directly represent the true signal amplitude**.
 
 Instead, the pole radius reflects **how strongly the tracked oscillatory frequency is represented in the signal at that time point**.
 
-Thus, the magnitude of the pole mainly indicates **spectral prominence**, not instantaneous amplitude.
+Thus, the magnitude of the pole mainly indicates **spectral prominence**, not instantaneous amplitude. Each pole thus has a magnitude between 0 and 1, which reflects the stability and damping of the oscillation:
+
+Magnitude → close to 1: weakly damped, sustained oscillation (sharp spectral peak)
+Magnitude → smaller values: strongly damped, short-lived oscillation (broader peak)
 
 The framework can track **multiple oscillatory components simultaneously** by increasing the number of poles.
 
@@ -282,19 +285,6 @@ Tracks instantaneous amplitude | ✗ | ✓ |
 Tracks spectral peak location | ✓ | ✓ |
 Model type | TV-AR pole representation | nonlinear oscillator state-space |
 Number of oscillators | multiple | single |
-
-In practice:
-
-• Pole tracking is useful for detecting and tracking multiple spectral peaks simultaneously.
-In this framework, each oscillatory component is represented by a complex pole of the AR model. Importantly, each pole has a magnitude between 0 and 1, which reflects the stability and damping of the oscillation:
-
-Magnitude → close to 1: weakly damped, sustained oscillation (sharp spectral peak)
-Magnitude → smaller values: strongly damped, short-lived oscillation (broader peak)
-
-This makes pole tracking particularly powerful for characterizing spectral structure, including how oscillations emerge, persist, or decay over time.
-
-• EKF oscillator tracking is better suited when the goal is to estimate instantaneous amplitude and frequency of a specific rhythm.
-Here, the model explicitly represents amplitude and phase as states, providing direct access to time-resolved amplitude dynamics, but typically assumes a single dominant oscillator.
 
 ---
 
