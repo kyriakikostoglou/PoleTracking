@@ -286,9 +286,16 @@ Number of oscillators | multiple | single |
 
 In practice:
 
-• **Pole tracking** is useful for detecting and tracking **multiple spectral peaks simultaneously**.
+• Pole tracking is useful for detecting and tracking multiple spectral peaks simultaneously.
+In this framework, each oscillatory component is represented by a complex pole of the AR model. Importantly, each pole has a magnitude between 0 and 1, which reflects the stability and damping of the oscillation:
 
-• **EKF oscillator tracking** is better suited when the goal is to estimate **instantaneous amplitude and frequency of a specific rhythm**.
+Magnitude → close to 1: weakly damped, sustained oscillation (sharp spectral peak)
+Magnitude → smaller values: strongly damped, short-lived oscillation (broader peak)
+
+This makes pole tracking particularly powerful for characterizing spectral structure, including how oscillations emerge, persist, or decay over time.
+
+• EKF oscillator tracking is better suited when the goal is to estimate instantaneous amplitude and frequency of a specific rhythm.
+Here, the model explicitly represents amplitude and phase as states, providing direct access to time-resolved amplitude dynamics, but typically assumes a single dominant oscillator.
 
 ---
 
