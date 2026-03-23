@@ -246,6 +246,7 @@ Instead, the pole radius reflects **how strongly the tracked oscillatory frequen
 Thus, the magnitude of the pole mainly indicates **spectral prominence**, not instantaneous amplitude. Each pole thus has a magnitude between 0 and 1, which reflects the stability and damping of the oscillation:
 
 Magnitude → close to 1: weakly damped, sustained oscillation (sharp spectral peak)
+
 Magnitude → smaller values: strongly damped, short-lived oscillation (broader peak)
 
 The framework can track **multiple oscillatory components simultaneously** by increasing the number of poles.
