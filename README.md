@@ -251,7 +251,7 @@ The framework can track **multiple oscillatory components simultaneously** by in
 
 ## EKF Oscillator Tracking
 
-The EKF oscillator framework models the signal as a **time-varying damped harmonic oscillator** with explicit magnitude and frequency states. :contentReference[oaicite:2]{index=2}
+The EKF oscillator framework which can be found here: https://github.com/kyriakikostoglou/EKF-Oscillator-Tracking  models the signal as a **time-varying damped harmonic oscillator** with explicit magnitude and frequency states. ´
 
 In that formulation:
 
@@ -273,7 +273,6 @@ Key characteristics:
 • requires bandpass filtering to isolate the target rhythm  
 
 ---
-
 ## Key differences
 
 | Feature | Pole Tracking | EKF Oscillator Tracking |
